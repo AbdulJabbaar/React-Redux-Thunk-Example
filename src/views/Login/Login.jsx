@@ -7,12 +7,12 @@ import LoginForm from "../../components/forms/LoginForm";
 import * as AuthActions from "./AuthActions";
 import { RouteNames } from "../../utils/Constants";
 
-const Login = props => {
+const Login = (props) => {
   // const { history } = props;
   const history = useHistory();
   const dispatch = useDispatch();
 
-  const loginUser = async values => {
+  const loginUser = async (values) => {
     const { loginUserName, loginPassword } = values;
     try {
       const { signMeIn } = AuthActions;
