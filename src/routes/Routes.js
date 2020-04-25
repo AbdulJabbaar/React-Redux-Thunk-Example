@@ -9,7 +9,7 @@ const Login = lazy(() => import("../views/Login/Login"));
 const Routes = () => {
   const authGuard = (SuccessComponent, FailComponentName) => {
     const userInfo = Common.getAuth();
-    // const isLoggedIn = userInfo ? true : false;
+    
     if (userInfo) {
       return <SuccessComponent />;
     }
@@ -37,5 +37,4 @@ const Routes = () => {
   );
 };
 
-// export default withRouter(Routes);
 export default Routes;
